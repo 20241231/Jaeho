@@ -31,6 +31,8 @@
 - Bash 기반 자동화 스크립트 작성
 - 리눅스 시스템 내에서 실시간 결과 리포트 자동 출력
 - **로그, 권한, 계정 관리, 서비스 설정 등** 다양한 보안 점검 항목 포함
+![result1](https://github.com/user-attachments/assets/a5cf77e2-f818-4c9c-9cfa-cc7be2ffa9ff)
+![jaeho](https://github.com/user-attachments/assets/5b2cb4a1-dce1-4e41-a11f-83d3ce3fd833)
 
 ---
 
