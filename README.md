@@ -46,6 +46,42 @@
   - GitHub Pages를 통한 다운로드/배포 환경 구축
 - 🏆 팀 CTF 대회 우승
 
+- CTF의 전체 흐름 요약
+1. **정보 수집 및 스캐닝**
+   - `nmap`으로 IP, 열린 포트 식별
+   - 익명 로그인 가능한 FTP 서버에서 단서 파일(`sunglass`) 확보
+
+2. **웹 포트 분석**
+   - `7979` 포트 페이지의 소스코드에서 **Base64, ROT47, ROT8000** 조합으로 디코딩 수행
+   - 숨겨진 디렉토리(`hidden.txt`)에서 `sunglass90.com` 도메인 발견
+   - 낚시용 로그인 페이지 구분 및 유저 힌트(`admin`)
+
+3. **8000번 포트 – Hansel & Alibaba 시나리오**
+   - 로그인 후 힌트를 통한 디코딩 → `alibaba` 경로 진입
+   - 콘솔 입력 및 `/api/access` 접근으로 암호 획득
+   - 암호 `open_sesame` 쿠키 설정 → 새 페이지 진입
+   - Burp Suite로 `GET → POST` 변경하여 플래그 획득
+
+4. **8080 포트 – WordPress 취약점**
+   - `wpscan`으로 사용자(admin1~5) 열거
+   - `hydra`로 패스워드 크랙 → 관리자 로그인
+   - 테마 설정을 통한 리버스 쉘 삽입 (`404.php`)
+   - Kali에서 `nc` 리스닝 후 셸 획득
+   - `.hint` 파일 확인 → ROT 기반 문자열 수집
+
+5. **수집된 문자열 조합**
+   - 다운로드 페이지, Apache, WordPress, Alibaba 페이지 힌트 조합
+   - Base64 디코딩 → SSH 패스워드 획득
+
+6. **SSH 계정 순차적 권한 상승**
+   - `sunglass` → `jaeho` → `smyoo` → `gilhyeong` 순으로 이동
+   - 스테가노그래피(`password.jpg`), 숨겨진 파일, 힌트 텍스트, `.bash_login`, `.bash_logout` 등을 활용
+   - 힌트: `한 글자를 0.8초 간격으로 11회 반복 타이핑` → 리듬 기반 로그인
+
+7. **setuid 기반 루트 권한 탈취**
+   - 의심스러운 바이너리 분석: `strings`, `chmod`, `ss`, `cat`, `echo` 등 활용
+   - `setuid` 가능한 실행파일 추출 → `root` 권한 획득
+   - `/root/access.txt`, `/root/system.info` 등의 정보 열람 성공
 ---
 
 ### 🕵️‍♂️ 웹 취약점 워게임 (2025)
