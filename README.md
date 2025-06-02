@@ -18,7 +18,7 @@
 |------|------|
 | Language | `Python`, `Bash`, `JavaScript`, `PHP` |
 | Web | `HTML`, `CSS`, `Mariadb`, `Apache` |
-| Tools | `Burp Suite`, `Wireshark`, `Metasploit`, `Hydra`, `Gobuster` |
+| Tools | `Burp Suite`, `Wireshark`, `Metasploit`, `Hydra`, `Gobuster`, `등` |
 | OS | `Rocky Linux`, `Ubuntu Linux` `Kali Linux`, `Windows` |
 
 ---
