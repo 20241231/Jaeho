@@ -17,13 +17,22 @@
 | 분야 | 기술 |
 |------|------|
 | Language | `Python`, `Bash`, `JavaScript`, `PHP` |
-| Web | `HTML`, `CSS`, `MySQL`, `Apache`, `Nginx` |
+| Web | `HTML`, `CSS`, `Mariadb`, `Apache` |
 | Tools | `Burp Suite`, `Wireshark`, `Metasploit`, `Hydra`, `Gobuster` |
-| OS | `Rocky Linux`, `Kali Linux`, `Windows` |
+| OS | `Rocky Linux`, `Ubuntu Linux` `Kali Linux`, `Windows` |
 
 ---
 
 ## 🧩 Projects
+
+### 🔍 주요정보통신기반시설 취약점 분석 스크립트 제작 (2025)
+- 기준 문서: "주요정보통신기반시설 기술적 취약점 분석 평가 방법 상세가이드"
+- 팀 프로젝트로 진행되었으며, 본인은 **U-49 ~ U-72 항목 진단 스크립트 개발** 담당
+- Bash 기반 자동화 스크립트 작성
+- 리눅스 시스템 내에서 실시간 결과 리포트 자동 출력
+- **로그, 권한, 계정 관리, 서비스 설정 등** 다양한 보안 점검 항목 포함
+
+---
 
 ### 🔐 ESG CTF 머신 제작 (2025)
 - 학원 내 보안과정 수강생 대상 CTF 대회를 위한 팀 CTF 구축
@@ -41,6 +50,15 @@
 - SQL Injection, XSS, LFI 등 웹 보안 위주 팀 워게임 문제 제작
 - 사용자 세션, 인증 우회, 로그 추적 등 실제 상황을 반영
 - PHP + MariaDB 기반 문제 60개 구현
+
+---
+
+### 🧠 기타 프로젝트
+- 보안 인프라 전체 구축 (방화벽, IDS, WAF, VPN, NMS, DB, CTF 등 통합 설계)
+- 실습 기반 OWASP Juice Shop 공격/분석
+- 시스템 기반 DDoS 탐지 / Suricata, Snort 룰 설계 및 실전 적용
+- 로그 분석 플랫폼 (LogAnalyzer, Wazuh, OSSEC) 구성 및 테스트
+- 네트워크 토폴로지 설계 및 실제 VM 기반 운영 환경 구성
 
 ---
 
