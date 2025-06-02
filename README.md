@@ -11,6 +11,7 @@
 - ✍️ 현재 공부 중: SQLD, 정보처리기사, 네트워크관리사
 
 ---
+![network-security-lab정보시스템구축추가완료](https://github.com/user-attachments/assets/6d8eaf0a-0cfe-439d-b811-1683c419ff1a)
 
 ## 🛠 Tech Stack
 
