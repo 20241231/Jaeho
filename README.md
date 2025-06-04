@@ -8,7 +8,6 @@
 - 🔍 보안 구축 엔지니어 양성과정 수료
 - 🎯 화이트 해커를 꿈꾸며, 다양한 취약점을 탐구하는 중
 - 🧠 늦게 시작했지만 복습과 실습으로 끊임없이 성장 중
-- ✍️ 현재 공부 중: SQLD, 정보처리기사, 네트워크관리사
 
 ---
 
@@ -44,7 +43,7 @@
   - SSH 계정 권한 상승 트랩 설계
   - 문제 해결 시 엔딩 크레딧 출력 페이지 구현
   - GitHub Pages를 통한 다운로드/배포 환경 구축
-- 🏆 팀 CTF 대회 우승
+- 🏆 학원 내 보안과정 CTF 대회 우승
 
 - CTF의 전체 흐름 요약
 1. **정보 수집 및 스캐닝**
@@ -88,7 +87,7 @@
 - SQL Injection, XSS, LFI 등 웹 보안 위주 팀 워게임 문제 제작
 - 사용자 세션, 인증 우회, 로그 추적 등 실제 상황을 반영
 - PHP + MariaDB 기반 문제 60개 구현
-
+- 🏆 학원 내 보안과정 wargame 대회 우승
 ---
 
 ### 🧠 기타 프로젝트
@@ -102,13 +101,6 @@
 ![network-security-lab정보시스템구축추가완료](https://github.com/user-attachments/assets/1aed3825-3d69-40ef-ba9b-51a55151aef0)
 ![db-software-application-20250404](https://github.com/user-attachments/assets/60bc8d9a-c9d8-47cb-b5d4-bf3bbab453da)
 ![full_security_portfolio](https://github.com/user-attachments/assets/554a68a9-fbfc-44aa-be2a-5c18a4584607)
-
----
-
-## 🏅 Certifications (준비 중)
-- [ ] 정보처리기사
-- [ ] SQLD (SQL 개발자)
-- [ ] 네트워크관리사 2급
 
 ---
 
