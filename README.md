@@ -79,7 +79,7 @@
 7. **setuid 기반 루트 권한 탈취**
    - 의심스러운 바이너리 분석: `strings`, `chmod`, `ss`, `cat`, `echo` 등 활용
    - `setuid` 가능한 실행파일 추출 → `root` 권한 획득
-   - `/root/access.txt`, `/root/system.info` 등의 정보 열람 성공
+   - `/...` root플래그 열람 성공
 ![image](https://github.com/user-attachments/assets/9535e57e-bb8e-474e-b591-3532b33bc980)
 ![image](https://github.com/user-attachments/assets/536e403d-e372-4c37-b3e3-61a2aafae967)
 
