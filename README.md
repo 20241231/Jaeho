@@ -141,6 +141,10 @@
 - **도구**: URL decoding, 콘솔 실행
 - **설명**: 주석에 숨겨진 URL-encoded 코드 실행으로 flag 획득
 - **보안 포인트**: 눈에 보이지 않는 코드 은닉 및 콘솔 실행의 위험
+![image](https://github.com/user-attachments/assets/da6ee63a-e661-41cf-9a06-7ae1880cdda8)
+![image](https://github.com/user-attachments/assets/8bfe7c44-30b9-4d94-befe-66b1bd344b93)
+ 
+
 ---
 
 ### 🧠 기타 프로젝트
