@@ -29,6 +29,7 @@
 - Bash 기반 자동화 스크립트 작성
 - 리눅스 시스템 내에서 실시간 결과 리포트 자동 출력
 - **로그, 권한, 계정 관리, 서비스 설정 등** 다양한 보안 점검 항목 포함
+  
 ![result1](https://github.com/user-attachments/assets/a5cf77e2-f818-4c9c-9cfa-cc7be2ffa9ff)
 ![jaeho](https://github.com/user-attachments/assets/5b2cb4a1-dce1-4e41-a11f-83d3ce3fd833)
 
@@ -80,6 +81,7 @@
    - 의심스러운 바이너리 분석: `strings`, `chmod`, `ss`, `cat`, `echo` 등 활용
    - `setuid` 가능한 실행파일 추출 → `root` 권한 획득
    - `/...` root플래그 열람 성공
+     
 ![image](https://github.com/user-attachments/assets/9535e57e-bb8e-474e-b591-3532b33bc980)
 ![image](https://github.com/user-attachments/assets/536e403d-e372-4c37-b3e3-61a2aafae967)
 
@@ -141,6 +143,7 @@
 - **도구**: URL decoding, 콘솔 실행
 - **설명**: 주석에 숨겨진 URL-encoded 코드 실행으로 flag 획득
 - **보안 포인트**: 눈에 보이지 않는 코드 은닉 및 콘솔 실행의 위험
+  
 ![image](https://github.com/user-attachments/assets/da6ee63a-e661-41cf-9a06-7ae1880cdda8)
 ![image](https://github.com/user-attachments/assets/8bfe7c44-30b9-4d94-befe-66b1bd344b93)
  
@@ -153,6 +156,7 @@
 - 시스템 기반 DDoS 탐지 / Suricata, Snort 룰 설계 및 실전 적용
 - 로그 분석 플랫폼 (LogAnalyzer, Wazuh, OSSEC) 구성 및 테스트
 - 네트워크 토폴로지 설계 및 실제 VM 기반 운영 환경 구성
+  
 ![networksecurity-portfolio-202502](https://github.com/user-attachments/assets/267eb52c-90ae-4bda-af9a-734a7518a633)
 ![20250304-s-n](https://github.com/user-attachments/assets/556c0343-29f8-4362-9077-d7d6995f6ab3)
 ![network-security-lab정보시스템구축추가완료](https://github.com/user-attachments/assets/1aed3825-3d69-40ef-ba9b-51a55151aef0)
