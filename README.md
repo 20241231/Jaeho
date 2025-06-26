@@ -35,7 +35,7 @@
 
 ---
 
-### 🔐 ESG CTF 머신 제작 (2025)
+### 🔐 SUNGLASS CTF 머신 제작 (2025)
 - 학원 내 보안과정 수강생 대상 CTF 대회를 위한 팀 CTF 구축
 - [🔗 문제 페이지 GitHub 링크](https://20241231.github.io/sunglass-ctf)
 - 주요 담당:
