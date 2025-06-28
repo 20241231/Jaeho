@@ -35,7 +35,11 @@
 
 ---
 
-### 🔐 SUNGLASS CTF 머신 제작 (2025)
+### 🔐 CTF 대회 (2025)
+
+![CTF-정보시스템보안구축엔지니어](https://github.com/user-attachments/assets/1bd4c67c-2f3d-4b8c-9ada-bc331fe6f79e)
+
+
 - 학원 내 보안과정 수강생 대상 CTF 대회를 위한 팀 CTF 구축
 - [🔗 문제 페이지 GitHub 링크](https://20241231.github.io/sunglass-ctf)
 - 주요 담당:
@@ -45,42 +49,18 @@
   - GitHub Pages를 통한 다운로드/배포 환경 구축
 - 🏆 학원 내 보안과정 CTF 대회 우승
 
-- CTF의 전체 흐름 요약
-1. **정보 수집 및 스캐닝**
-   - `nmap`으로 IP, 열린 포트 식별
-   - 익명 로그인 가능한 FTP 서버에서 단서 파일(`sunglass`) 확보
+### 🏆 CTF 전체 흐름 요약
 
-2. **웹 포트 분석**
-   - `7979` 포트 페이지의 소스코드에서 **Base64, ROT47, ROT8000** 조합으로 디코딩 수행
-   - 숨겨진 디렉토리(`hidden.txt`)에서 `sunglass90.com` 도메인 발견
-   - 낚시용 로그인 페이지 구분 및 유저 힌트(`admin`)
+| 단계 | 주요 내용 | 세부 설명 |
+|------|-----------|-----------|
+| 1 | 정보 수집 및 스캐닝 | `nmap`으로 포트 식별, FTP 익명 로그인으로 `sunglass` 파일 확보 |
+| 2 | 웹 포트 분석 | 7979 포트에서 Base64/ROT47/ROT8000 조합 디코딩, `sunglass90.com` 도메인 발견, `admin` 힌트 확보 |
+| 3 | 8000번 Hansel & Alibaba | 로그인 후 힌트 → `alibaba` 경로, `/api/access`에서 암호 획득, `open_sesame` 쿠키 설정 → Burp Suite로 POST 변조하여 플래그 획득 |
+| 4 | 8080번 WordPress 취약점 | `wpscan` 사용자 열거, `hydra`로 크랙, 테마 내 `404.php` 리버스쉘 삽입, nc로 셸 획득, `.hint` 파일에서 문자열 수집 |
+| 5 | 수집 문자열 조합 | 여러 힌트 조합 후 Base64 디코딩 → SSH 패스워드 획득 |
+| 6 | SSH 계정 권한 상승 | sunglass → jaeho → smyoo → gilhyeong 순 이동, 스테가노그래피·힌트·`.bash_login` 등 활용, 0.8초 간격 11회 타이핑 통한 리듬 기반 로그인 |
+| 7 | setuid 루트 탈취 | 의심 바이너리(`strings`, `chmod`, `ss`, `cat`, `echo`) 분석, setuid 가능한 실행파일로 루트 획득, `/...`에서 루트 플래그 열람 |
 
-3. **8000번 포트 – Hansel & Alibaba 시나리오**
-   - 로그인 후 힌트를 통한 디코딩 → `alibaba` 경로 진입
-   - 콘솔 입력 및 `/api/access` 접근으로 암호 획득
-   - 암호 `open_sesame` 쿠키 설정 → 새 페이지 진입
-   - Burp Suite로 `GET → POST` 변경하여 플래그 획득
-
-4. **8080 포트 – WordPress 취약점**
-   - `wpscan`으로 사용자(admin1~5) 열거
-   - `hydra`로 패스워드 크랙 → 관리자 로그인
-   - 테마 설정을 통한 리버스 쉘 삽입 (`404.php`)
-   - Kali에서 `nc` 리스닝 후 셸 획득
-   - `.hint` 파일 확인 → 문자열 수집
-
-5. **수집된 문자열 조합**
-   - 다운로드 페이지, Apache, WordPress, Alibaba 페이지 힌트 조합
-   - Base64 디코딩 → SSH 패스워드 획득
-
-6. **SSH 계정 순차적 권한 상승**
-   - `sunglass` → `jaeho` → `smyoo` → `gilhyeong` 순으로 이동
-   - 스테가노그래피(`password.jpg`), 숨겨진 파일, 힌트 텍스트, `.bash_login`, `.bash_logout` 등을 활용
-   - 힌트: `한 글자를 0.8초 간격으로 11회 반복 타이핑` → 리듬 기반 로그인
-
-7. **setuid 기반 루트 권한 탈취**
-   - 의심스러운 바이너리 분석: `strings`, `chmod`, `ss`, `cat`, `echo` 등 활용
-   - `setuid` 가능한 실행파일 추출 → `root` 권한 획득
-   - `/...` root플래그 열람 성공
      
 ![image](https://github.com/user-attachments/assets/9535e57e-bb8e-474e-b591-3532b33bc980)
 ![image](https://github.com/user-attachments/assets/536e403d-e372-4c37-b3e3-61a2aafae967)
@@ -88,6 +68,9 @@
 ---
 
 ### 🕵️‍♂️ 웹 취약점 워게임 (2025)
+
+![Wargame-정보시스템구축엔지니어](https://github.com/user-attachments/assets/0732c09d-7624-4191-a289-af24b724c2ee)
+
 - SQL Injection, XSS, LFI 등 웹 보안 위주 팀 워게임 문제 제작
 - 사용자 세션, 인증 우회, 로그 추적 등 실제 상황을 반영
 - PHP + MariaDB 기반 문제 60개 구현
